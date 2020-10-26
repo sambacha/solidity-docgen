@@ -1,0 +1,81 @@
+
+:docbook:
+:toc:
+
+= Solidity-Docgen
+
+**Documentation generator for smart contract libraries.** Use the inline
+documentation in your Solidity code for generating websites or any sort of
+document.
+
+The output is completely customizable through Handlebars templates that provide
+easy access to all the metadata of your smart contract.
+
+== Usage
+
+> **Note:** Detailed usage information is not available yet. Please be patient!
+
+```sh
+npm install solidity-docgen
+```
+
+`solidity-docgen` takes as input a directory of contracts and `README`
+documents. This directory is specified using the `--input`/`-i` flag,
+defaulting to `./contracts`. It produces a set of files that it will place in
+the output directory specified by `--output`/`-o`, defaulting to `./docs`.
+
+```
+solidity-docgen [ -i <input-dir> ] [ -o <output-dir> ] [ -t <templates-dir> ]
+```
+
+link:https://solidity.readthedocs.io/en/develop/natspec-format.html[Natspec]
+
+
+=== Commands 
+
+USAGE
+  $ solidity-docgen
+
+OPTIONS
+  -H, --helpers=helpers                              path to a file whose
+                                                     exports will be registered
+                                                     as handlebars helpers
+
+  -e, --exclude=exclude                              exclude directories that
+                                                     match the pattern
+                                                     (separated by commas)
+
+  -i, --input=input                                  [default: contracts]
+                                                     directory where contracts
+                                                     will be taken from
+
+  -o, --output=output                                [default: docs] directory
+                                                     where generated docs will
+                                                     be written
+
+  -s, --output-structure=(contracts|readmes|single)  [default: contracts] how to
+                                                     structure contracts across
+                                                     output files
+
+  -t, --templates=templates                          directory with template
+                                                     files
+
+  -x, --extension=extension                          [default: md] file
+                                                     extension for generated
+                                                     pages, not necessary when
+                                                     using READMEs
+
+  --help                                             show CLI help
+
+  --solc-module=solc-module                          path to an alternative solc
+                                                     module
+
+  --solc-settings=solc-settings                      compiler settings for solc
+                                                     module
+
+  --version                                          show CLI version
+
+
+== License 
+
+MIT
