@@ -31,8 +31,12 @@ solidity-docgen [ -i <input-dir> ] [ -o <output-dir> ] [ -t <templates-dir> ]
 link:https://solidity.readthedocs.io/en/develop/natspec-format.html[Natspec]
 
 
-=== Commands 
+=== Usage
 
+* Command Line Interface:
++
+[source,bash]
+-----------------
 USAGE
   $ solidity-docgen
 
@@ -74,7 +78,7 @@ OPTIONS
                                                      module
 
   --version                                          show CLI version
-
+-----------------
 
 == License 
 
